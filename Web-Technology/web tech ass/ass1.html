@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <style>
+      /* Internal CSS */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: black;
+      }
+      /* Inline CSS */
+      #header {
+        text-align: center;
+        background-color: rgb(159, 159, 247);
+        color: #fff;
+        padding: 10px;
+      }
+      /* CSS for Navigation */
+      nav {
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(159, 159, 247);
+        padding: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 10px;
+      }
+      nav img {
+        padding: 4px;
+      }
+      #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #home .home_text {
+        font-family: "Poppins", sans-serif;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      #home .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 90px 0 90px;
+      }
+      #content .tablehead{
+        width: 200px;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        background-color: #9f9f9f;
+        padding: 20px;
+        background-blend-mode: color-burn;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-around;
+      }
+      form label{
+        font-weight:bold;
+      }
+      form input{
+        padding: 2px;
+        margin-top: 2px;
+        border-radius: rounded;
+        outline: none;
+      }
+      form div {padding: 4px;}
+      form button{
+        padding: 5px 20px 5px;
+        border-radius: 20px;
+        background-color: slateblue;
+        color:white;
+      } 
+      form button:hover{
+        padding: 5px 20px 5px;
+        background-color: rgb(70, 49, 204);
+        border-radius: 20px;
+      } 
+
+      /* CSS for Footer */
+      footer {
+        margin-top: 5rem;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="">
+        <img
+        src="https://th.bing.com/th/id/R.5e38c5c72d312ccc65b89e0ca2b81bc3?rik=q4Hd9dCqPef4HA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_557617.png&ehk=MwJ%2bFLqajymm%2bcbu%2fLqSOk%2b%2fCgtsVXmMAd0jvdj%2bjNI%3d&risl=&pid=ImgRaw&r=0"
+        width=40px" height="40px"/>
+      </div>
+      <div class="">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <div id="home">
+      <h2 class="home_text">गोटू वडापाव</h2>
+      <p class="">
+        चला वडापाव खाऊया ! 
+      </p>
+      <div id="content" class="content">
+        <!-- Table for Menu -->
+        <table border="1"  cellspacing="0" cellpadding="5">
+          <tr>
+            <th>Item</th>
+            <th class="tablehead">Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Vadapav</td>
+            <td>10.99</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Chota Pav</td>
+            <td>15.99</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Medium Pav</td>
+            <td>20.99</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Bada Pav</td>
+            <td>25.99</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>x-tra large Pav</td>
+            <td>30.99</td>
+          </tr>
+
+          <!-- Add more rows as needed -->
+        </table>
+        <img
+          src="https://grannynaturals.com/wp-content/uploads/2021/04/vada-pav-mumbai.jpg"
+          height="40%"
+          width="40%"
+        />
+      </div>
+      <!-- Form for Contact -->
+      <h2 class="home_text ">Order Now </h2>
+      <form  action="submit_form.php" method="post">
+        <div class="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+        <div class="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+       
+        <div class=""><button type="submit" value="Submit" >submit</button>  </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Restaurant Name. All rights reserved.
+        </footer>
+  </body>
+</html>
