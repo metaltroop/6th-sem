@@ -1,0 +1,26 @@
+public class LinearSearch {
+    
+    public static void searchInteger(List<Integer> myList, Integer target) {
+        Boolean found = false;
+        
+        for(Integer num : myList) {
+            if(num == target) {
+                found = true;
+                break;
+            }
+        }
+        
+        if(found) {
+            System.debug('Element found.');
+        } else {
+            System.debug('Element not found.');
+        }
+    }
+}
+/*
+ // Anonymous Apex code for testing
+List<Integer> myNumbers = new List<Integer>{3, 4, 5, 6};
+Integer targetNumber = 3;
+
+LinearSearch.searchInteger(myNumbers, targetNumber);
+*/
